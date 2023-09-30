@@ -5,9 +5,11 @@ import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/contants";
 
 const Head = () => {
+  
   const [searchQuery, setsearchQuery] = useState("");
   useEffect(()=>{ 
     if (searchQuery) {
+      
     getSearchSuggestions();
   } else {
     console.log("search something")
@@ -20,7 +22,6 @@ const Head = () => {
      console.log("h2")
      console.log(json)
   }
-
 
   const dispatch = useDispatch();
   const handlesidebartoggle = () => {
